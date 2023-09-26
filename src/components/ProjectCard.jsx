@@ -1,65 +1,78 @@
-import React from "react";
-import styles from "./ProjectCard.module.scss"; // Import SCSS module
+const ProjectCard = ({
+  project,
+  sourceCodeHref,
+  sourceCode,
+  Button,
+  CardDescription,
+  CardTitle,
+  titleHref,
+  btnHref,
+  skills,
+}) => {
+  const imageStyle = {
+    width: "350px",
+    height: "250px",
+    objectFit: "cover",
+  };
 
-const ProjectCard = ({ project }) => {
   return (
-    // eslint-disable-next-line jsx-a11y/anchor-is-valid
-    // <a href="#" className={styles.moreInfoLink}>
-    //   <div className={styles.projectCard}>
-    //     <div className="image-container">
-    //     <img
-    //       className={styles.projectImage}
-    //       src={`/images/${project.image}`}
-    //       alt={`Project: ${project.title}`}
-    //       // width="350px"
-    //       // height="250px"
-    //     />
-    //     </div>
-    //     <div className={styles.projectDetails}>
-    //       <h3 className={styles.projectTitle}>{project.title}</h3>
-    //       <p className={styles.projectTech}>{project.tech}</p>
-    //       More Info
-    //     </div>
-    //   </div>
-    // </a>
+    <>
+      {/*  */}
+      <div className="overflow-hidden bg-white rounded-lg m-5 hover:ring-4 ring-orange-300 transition duration-1000 ease-in-out hover:shadow-lg">
+        <img
+          src={`/images/${project.image}`}
+          alt={`Project: ${project.title}`}
+          style={imageStyle}
+          className="bg-gray-500"
+        />
+        <div className="p-8 text-left sm:p-9 md:p-7 xl:p-5">
+          <h3>
+            <a
+              href={titleHref ? titleHref : "/#"}
+              className="mb-3 block text-xl font-extrabold text-dark hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
+            >
+              {CardTitle}
+            </a>
+          </h3>
+          <p className="text-base leading-relaxed mb-3 text-body-color">
+            {CardDescription}
+          </p>
 
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-      </a>
-      <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
-        </p>
-        <a
-          href="#"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Read more
-          <svg
-            class="w-3.5 h-3.5 ml-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a>
+          {Button && (
+            <>
+              <a
+                href={btnHref ? btnHref : "/tml"}
+                className="inline-block rounded border border-[#E5E7EB] mr-2 text-base font-medium text-body-color transition hover:border-primary hover:text-white  hover:bg-primary  p-2 "
+              >
+                {Button}
+              </a>
+              <a
+                href={sourceCodeHref ? sourceCodeHref : "https://www.google.com/"}
+                className="inline-block rounded border border-[#E5E7EB] text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white p-2 "
+              >
+                {sourceCode}
+              </a>
+            </>
+          )}
+
+          {/* Display skills as badges */}
+          {skills && (
+            <div className="mt-3">
+              {skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="inline-block bg-orange-400 rounded px-3 py-1 text-sm font-bold text-white mr-2 mb-2"
+                >
+                  <strong>{skill}</strong>
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      {/*  */}
+    </>
   );
 };
 

@@ -1,13 +1,27 @@
-import withMT from "@material-tailwind/react/utils/withMT";
- 
-export default withMT({
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
-  ],
+module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#ff8133',
+      },
+    },
   },
-  plugins: [],
-});
+  content: ["./*.html","node_modules/preline/dist/*.js","./src/**/*.jsx"],
+  plugins: [
+    require('preline/plugin'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.border-primary': {
+          borderColor: 'var(primary)', // Change this to your desired border color
+        },
+        '.bg-primary': {
+          backgroundColor: 'var(primary)', // Change this to your desired background color
+        },
+        '.text-white': {
+          color: '#FFFF', // White color
+        },
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
+}
