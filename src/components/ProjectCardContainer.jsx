@@ -28,7 +28,6 @@ const ProjectCardContainer = () => {
               sourceCode={project.sourceCode}
               skills={project.skills}
               project={project}
-
             />
           ))}
         </div>

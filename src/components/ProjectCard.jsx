@@ -34,7 +34,7 @@ const ProjectCard = ({
               {CardTitle}
             </a>
           </h3>
-          <p className="text-base leading-relaxed mb-3 text-body-color">
+          <p className="text-base leading-relaxed mb-3 text-body-color max-w-[300px]">
             {CardDescription}
           </p>
 
