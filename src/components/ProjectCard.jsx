@@ -14,7 +14,6 @@ const ProjectCard = ({
     height: "250px",
     objectFit: "cover",
   };
-
   return (
     <>
       {/*  */}
@@ -47,7 +46,9 @@ const ProjectCard = ({
                 {Button}
               </a>
               <a
-                href={sourceCodeHref ? sourceCodeHref : "https://www.google.com/"}
+                href={
+                  sourceCodeHref ? sourceCodeHref : "https://www.google.com/"
+                }
                 className="inline-block rounded border border-[#E5E7EB] text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white p-2 "
               >
                 {sourceCode}
