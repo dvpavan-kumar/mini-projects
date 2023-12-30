@@ -1,6 +1,32 @@
+function getRandomId() {
+  return Math.floor(Math.random() * 1000000);
+}
+
 const projectsData = [
   {
-    id: 1,
+    id: getRandomId(),
+    image: "classy-cart.jpg",
+    title: "classy cart ",
+    sourceCodeHref: "https://github.com/dvpavan-kumar/react-classy-cart",
+    liveDemoLink: "https://dvpavan-kumar.github.io/react-classy-cart/",
+    demoButton: "Live Demo",
+    sourceCode: "Source Code",
+    skills: ["Html5", "CSS3", "JavaScript", "React"],
+    details: "Built a React simple Ecommerce web app using the using useContext hook",
+  },
+  {
+    id: getRandomId(),
+    image: "project-todo.jpg",
+    title: "Projects Todo List",
+    sourceCodeHref: "https://github.com/dvpavan-kumar/React-project-manager",
+    liveDemoLink: "https://dvpavan-kumar.github.io/React-project-manager/",
+    demoButton: "Live Demo",
+    sourceCode: "Source Code",
+    skills: ["Html5", "CSS3", "JavaScript", "React"],
+    details: "Built a React simple Project todo web app using the using useContext, useReducer hook",
+  },
+  {
+    id: getRandomId(),
     image: "todo-list.jpg",
     title: "Todo List ",
     sourceCodeHref: "https://github.com/dvpavan-kumar/react-todo-list",
@@ -11,7 +37,7 @@ const projectsData = [
     details: "Built a React ToDoList web app using the useReducer hook",
   },
   {
-    id: 2,
+    id: getRandomId(),
     image: "slider.jpg",
     title: "Image Slider",
     sourceCodeHref: "https://github.com/dvpavan-kumar/react-image-sliders",
@@ -22,7 +48,7 @@ const projectsData = [
     details: "Built a React ImageSlider using the Vitejs and Ts",
   },
   {
-    id: 3,
+    id: getRandomId(),
     image: "land.jpg",
     title: "launching Page",
     sourceCodeHref:
@@ -34,7 +60,7 @@ const projectsData = [
     skills: ["Html5", "CSS3", "JavaScript"],
   },
   {
-    id: 4,
+    id: getRandomId(),
     image: "placeholder.jpg",
     title: "Content PlaceHolder",
     sourceCodeHref:
@@ -46,7 +72,7 @@ const projectsData = [
     skills: ["Html5", "CSS3", "JavaScript"],
   },
   {
-    id: 5,
+    id: getRandomId(),
     image: "testimonials.jpg",
     title: "Testimonial Cards  ",
     sourceCodeHref:
@@ -58,7 +84,7 @@ const projectsData = [
     skills: ["Html5", "CSS3", "JavaScript"],
   },
   {
-    id: 6,
+    id: getRandomId(),
     image: "toggle.jpg",
     title: "Toggle Button ",
     sourceCodeHref:
@@ -69,7 +95,7 @@ const projectsData = [
     skills: ["Html5", "CSS3", "JavaScript"],
   },
   {
-    id: 7,
+    id: getRandomId(),
     image: "payment-page.jpg",
     title: "Payment Page ",
     sourceCodeHref:
@@ -80,7 +106,7 @@ const projectsData = [
     skills: ["Html5", "CSS3"],
   },
   {
-    id: 8,
+    id: getRandomId(),
     image: "exp-cards.jpg",
     title: "Expanding Cards ",
     sourceCodeHref:
@@ -92,7 +118,7 @@ const projectsData = [
     skills: ["Html5", "CSS3", "JavaScript"],
   },
   {
-    id: 9,
+    id: getRandomId(),
     image: "404.jpg",
     title: "404 Glitch page ",
     sourceCodeHref:
@@ -104,7 +130,7 @@ const projectsData = [
     skills: ["Html5", "CSS3"],
   },
   {
-    id: 10,
+    id: getRandomId(),
     image: "buttons.jpg",
     title: "Button Hover Transitions",
     sourceCodeHref: "https://github.com/dvpavan-kumar/css-hover-transitions",

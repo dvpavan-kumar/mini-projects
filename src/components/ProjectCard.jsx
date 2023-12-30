@@ -71,8 +71,6 @@ const ProjectCard = ({
           )}
         </div>
       </div>
-
-      {/*  */}
     </>
   );
 };
